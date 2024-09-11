@@ -91,6 +91,7 @@
             label1.Size = new Size(121, 17);
             label1.TabIndex = 9;
             label1.Text = "Esqueci minha Senha";
+            label1.Click += label1_Click;
             // 
             // bt_login
             // 

@@ -11,7 +11,7 @@ namespace Projeto_Integrador
     public partial class Form1 : Form
     {
 
-        public static string adm {  get; set; }
+        public static string adm { get; set; }
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -56,7 +56,7 @@ namespace Projeto_Integrador
 
             cmd.Parameters.AddWithValue("@email", email);
             cmd.Parameters.AddWithValue("@senha", senha);
-            
+
 
             cn.Conectar(true);
             int reg = (int)cmd.ExecuteScalar();
@@ -68,9 +68,9 @@ namespace Projeto_Integrador
                 while (reader.Read())
                 {
 
-                    
-                   // id_funcionario = int.Parse(reader["id_funcionario"].ToString());
-                  //  nomeUsuario = reader["nome_funcionario"].ToString();
+
+                    // id_funcionario = int.Parse(reader["id_funcionario"].ToString());
+                    //  nomeUsuario = reader["nome_funcionario"].ToString();
                     email = reader["email"].ToString();
                     senha = reader["senha"].ToString();
                     adm = reader["nivel_funcionario"].ToString();
@@ -79,7 +79,7 @@ namespace Projeto_Integrador
 
 
                 }
-                if(adm == "admin")
+                if (adm == "admin")
                 {
                     MenuAdmin Admin = new MenuAdmin();//para abrir o novo formulario Comentario
                     Admin.Show();
@@ -95,6 +95,12 @@ namespace Projeto_Integrador
                 MessageBox.Show("Usuário não encontrado");
             }
             cn.Conectar(false);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Esqueci_senha esqueci = new Esqueci_senha();
+            esqueci.Show();
         }
     }
 }
