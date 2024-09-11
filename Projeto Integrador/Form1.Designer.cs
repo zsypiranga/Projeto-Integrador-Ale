@@ -77,7 +77,7 @@
             panel2.Controls.Add(tb_senha);
             panel2.Controls.Add(tb_email);
             panel2.Controls.Add(pictureBox1);
-            panel2.Location = new Point(12, 12);
+            panel2.Location = new Point(231, 12);
             panel2.Name = "panel2";
             panel2.Size = new Size(314, 311);
             panel2.TabIndex = 0;
@@ -125,7 +125,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(93, 3);
+            pictureBox1.Location = new Point(105, 13);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(134, 78);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
