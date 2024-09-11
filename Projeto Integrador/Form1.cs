@@ -62,7 +62,7 @@ namespace Projeto_Integrador
             int reg = (int)cmd.ExecuteScalar();
             if (reg > 0)
             {
-                query = $"select * from tb_funcionarios where email = '{email}' and senha = '{senha}' and cargo_funcionario !='{adm}'";
+                query = $"select * from tb_funcionarios where email = '{email}' and senha = '{senha}' and nivel_funcionario !='{adm}'";
                 cmd = new SqlCommand(query, cn.conn);
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -73,7 +73,7 @@ namespace Projeto_Integrador
                   //  nomeUsuario = reader["nome_funcionario"].ToString();
                     email = reader["email"].ToString();
                     senha = reader["senha"].ToString();
-                    adm = reader["cargo_funcionario"].ToString();
+                    adm = reader["nivel_funcionario"].ToString();
                     //user = reader["nivel_func"].ToString();
 
 

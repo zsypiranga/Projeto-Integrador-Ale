@@ -9,7 +9,7 @@ namespace Sistema_de_Agendamento___Professor
 {
     internal class Connection
     {
-        string server = @"VPR0687150W10-1\SQLEXPRESS";
+        string server = @"VPR0687148W10-1\SQLEXPRESS";
         string db = "db_locadora_carros";
         string user = "sa";
         string pass = "123456";
